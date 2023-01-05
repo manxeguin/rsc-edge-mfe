@@ -8,9 +8,9 @@ const ReactServerWebpackPlugin = require("react-server-dom-webpack/plugin");
 const config = {
     mode: isProduction ? "production" : "development",
     devtool: isProduction ? "source-map" : "cheap-module-source-map",
-    entry: [path.resolve(__dirname, "./dist/index.client.js")],
+    entry: [path.resolve(__dirname, "./build/transpiled/index.client.js")],
     output: {
-        path: path.resolve(__dirname, "./build"),
+        path: path.resolve(__dirname, "./build/compiled"),
         filename: "main.[contenthash].js",
     },
     module: {

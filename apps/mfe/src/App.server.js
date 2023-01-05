@@ -3,7 +3,7 @@ import Header from "./Header.server";
 import Main from "./Main.server";
 import Footer from "./Footer.server";
 
-export default function App({ }) {
+export default function App({ selectedId, isEditing, searchText}) {
     return (
         <div>
             <Header />
