@@ -1,0 +1,19 @@
+{
+  "name": "dll-libs",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "build": "webpack"
+  },
+  "exports": {
+    "./manifest": "./build/dll/core.json"
+  },
+  "dependencies": {
+    "webpack": "^5.75.0",
+    "webpack-manifest-plugin": "^4.0.2",
+    "webpack-bundle-analyzer": "^4.5.0"
+  },
+  "devDependencies": {
+    "webpack-cli": "^5.0.0"
+  }
+}
