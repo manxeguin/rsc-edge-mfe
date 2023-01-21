@@ -13,7 +13,7 @@ export function useRefresh() {
 
 const getFlightResponse = async (locationKey) => {
   //const flightResponse = fetch("/react?location=" + encodeURIComponent(locationKey));
-  const flightResponse = fetch("http://localhost:3000/mfe");
+  const flightResponse = fetch("/rsc");
   const flight = await createFromFetch(flightResponse);
   return flight;
 };

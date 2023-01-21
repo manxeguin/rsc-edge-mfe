@@ -2,15 +2,19 @@
   "name": "rsc-mfe",
   "version": "1.0.0",
   "license": "MIT",
-  "exports":{
+  "exports": {
     "./App": "./build/transpiled/App.server.js",
-    "./manifest": "./build/compiled/react-client-manifest.json"
+    "./manifest": "./build/compiled/react-client-manifest.json",
+    "./client-manifest": "./build/compiled/client-manifest.json"
   },
+  "files": [
+    "build/**/*"
+  ],
   "scripts": {
     "build-babel": "babel src --out-dir build/transpiled --extensions \".ts,.tsx,.js\" --ignore \"**/__tests__/*.test.js\",\"**/*.stories.js\",\"**/testUtils/**/*.js\" -s",
     "build-client": "webpack",
     "build-styles": "tailwindcss ./src/styles.css -o ./build/transpiled/styles.css --minify",
-    "build": "NODE_ENV=production run-s build-babel build-styles build-client"
+    "build": "NODE_ENV=production run-s build-styles build-babel  build-client"
   },
   "dependencies": {
     "@babel/cli": "^7.12.1",
@@ -32,7 +36,8 @@
     "react-server-dom-webpack": "18.3.0-next-fecc288b7-20221025",
     "style-loader": "^3.3.1",
     "tailwindcss": "^3.2.4",
-    "webpack": "^5.75.0"
+    "webpack": "^5.75.0",
+    "copy-webpack-plugin": "11.0.0"
   },
   "devDependencies": {
     "webpack-bundle-analyzer": "^4.7.0",
