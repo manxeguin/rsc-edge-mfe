@@ -2,6 +2,7 @@
   "name": "rsc-mfe",
   "version": "1.0.0",
   "license": "MIT",
+  "type": "module",
   "exports": {
     "./App": "./build/transpiled/App.server.js",
     "./manifest": "./build/compiled/react-client-manifest.json",
@@ -14,7 +15,7 @@
     "build-babel": "babel src --out-dir build/transpiled --extensions \".ts,.tsx,.js\" --ignore \"**/__tests__/*.test.js\",\"**/*.stories.js\",\"**/testUtils/**/*.js\" -s",
     "build-client": "webpack",
     "build-styles": "tailwindcss ./src/styles.css -o ./build/transpiled/styles.css --minify",
-    "build": "NODE_ENV=production run-s build-styles build-babel  build-client"
+    "build-lib": "NODE_ENV=production run-s build-styles build-babel  build-client"
   },
   "dependencies": {
     "@babel/cli": "^7.12.1",
