@@ -1,7 +1,7 @@
-// import ReactApp from "rsc-mfe/App";
-// import manifest from "rsc-mfe/manifest";
-// import clientManifest from "rsc-mfe/client-manifest";
-// import { renderHTML, getFlightString } from "rsc-utils";
+import ReactApp from "rsc-mfe/App";
+import manifest from "rsc-mfe/manifest";
+import clientManifest from "rsc-mfe/client-manifest";
+import { renderHTML, getFlightString } from "rsc-utils";
 import * as fsAsync from "fs/promises";
 import * as fs from "fs";
 import * as path from "path";
