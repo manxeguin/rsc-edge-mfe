@@ -4,7 +4,7 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "build": "babel-node index.js",
+    "build": "npx babel-node index.js",
     "start": "serve dist -p 3001"
   },
   "dependencies": {
