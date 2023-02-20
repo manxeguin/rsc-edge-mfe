@@ -2,7 +2,6 @@
   "name": "rsc-mfe",
   "version": "1.0.0",
   "license": "MIT",
-  "type": "module",
   "exports": {
     "./App": "./build/transpiled/App.server.js",
     "./manifest": "./build/compiled/react-client-manifest.json",
