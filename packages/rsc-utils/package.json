@@ -1,15 +1,14 @@
 {
-  "name": "static-app",
+  "name": "rsc-utils",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "dist/index.js",
   "license": "MIT",
   "scripts": {
-    "build": "babel-node index.js",
+    "build-babel": "babel ./index.js --out-dir ./dist --extensions \".ts,.tsx,.js\"  -s",
+    "build": "npm run build-babel",
     "start": "serve dist -p 3001"
   },
   "dependencies": {
-    "rsc-mfe": "*",
-    "rsc-utils": "*",
     "@babel/cli": "^7.12.1",
     "@babel/core": "^7.12.3",
     "@babel/preset-env": "^7.12.1",

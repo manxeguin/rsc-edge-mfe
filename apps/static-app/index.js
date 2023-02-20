@@ -1,10 +1,7 @@
-import React from "react";
-import ReactDOMServer from "react-dom/server";
-import { renderToReadableStream } from "react-server-dom-webpack/server.browser";
-import { createFromReadableStream } from "react-server-dom-webpack/client";
 import ReactApp from "rsc-mfe/App";
 import manifest from "rsc-mfe/manifest";
 import clientManifest from "rsc-mfe/client-manifest";
+import { renderHTML, getFlightString } from "rsc-utils";
 import * as fsAsync from "fs/promises";
 import * as fs from "fs";
 import * as path from "path";
@@ -41,31 +38,12 @@ const copyClientAssets = () => {
     }
   });
 };
-const renderHTML = async () => {
-  const reactElement = React.createElement(ReactApp, {});
-  const readableStream = renderToReadableStream(reactElement, manifest);
-  const result = await createFromReadableStream(readableStream);
-  const html = ReactDOMServer.renderToString(result);
-
-  return html;
-};
-
-const renderFlight = async () => {
-  const reactElement = React.createElement(ReactApp, {});
-  const readableStream = renderToReadableStream(reactElement, manifest);
-  return readableStream;
-};
-
-const getStringValueFromStream = async (readableStreamValue) => {
-  const { value } = await readableStreamValue.getReader().read();
-
-  return new TextDecoder().decode(value);
-};
 
 const pageTemplate = ({ content, flightString, scripts }) => `<html>
 <head>
-  <title>My Page</title>
-  <meta name="description" content="This is my page" />
+  <title>Static Landing Page Experiment</title>
+  <meta name="description" content="Landing page" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="styles.min.css">
 </head>
 <body>
@@ -85,9 +63,8 @@ const getClientScripts = () => {
 
 const renderApp = async () => {
   cleanOutputFolder();
-  const content = await renderHTML();
-  const flightReadableStream = await renderFlight();
-  const flightString = await getStringValueFromStream(flightReadableStream);
+  const content = await renderHTML(ReactApp, manifest);
+  const flightString = await getFlightString(ReactApp, manifest);
   const html = pageTemplate({
     content,
     flightString,
@@ -106,5 +83,3 @@ const renderApp = async () => {
 };
 
 renderApp();
-
-//TODO escribir en build el html y usar un simple server http para probar
