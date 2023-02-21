@@ -57,7 +57,7 @@ const pageTemplate = ({ content, flightString, scripts }) => `<html>
 
 const getClientScripts = () => {
   return clientManifest.main.map(
-    (asset) => `<script src="/${asset}" defer ></script>\n `
+    (asset) => `<script src="${asset}" defer ></script>\n `
   );
 };
 
