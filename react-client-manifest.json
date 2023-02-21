@@ -1,0 +1,182 @@
+{
+  "file:///home/runner/work/rsc-edge-mfe/rsc-edge-mfe/apps/mfe/build/transpiled/index.client.js": {
+    "": {
+      "id": 475,
+      "chunks": [
+        179
+      ],
+      "name": ""
+    },
+    "*": {
+      "id": 475,
+      "chunks": [
+        179
+      ],
+      "name": "*"
+    }
+  },
+  "file:///home/runner/work/rsc-edge-mfe/rsc-edge-mfe/apps/mfe/build/transpiled/Root.client.js": {
+    "": {
+      "id": 971,
+      "chunks": [
+        179
+      ],
+      "name": ""
+    },
+    "*": {
+      "id": 971,
+      "chunks": [
+        179
+      ],
+      "name": "*"
+    },
+    "LocationContext": {
+      "id": 971,
+      "chunks": [
+        179
+      ],
+      "name": "LocationContext"
+    },
+    "__esModule": {
+      "id": 971,
+      "chunks": [
+        179
+      ],
+      "name": "__esModule"
+    },
+    "default": {
+      "id": 971,
+      "chunks": [
+        179
+      ],
+      "name": "default"
+    },
+    "useLocation": {
+      "id": 971,
+      "chunks": [
+        179
+      ],
+      "name": "useLocation"
+    }
+  },
+  "file:///home/runner/work/rsc-edge-mfe/rsc-edge-mfe/apps/mfe/build/transpiled/Cache.client.js": {
+    "": {
+      "id": 950,
+      "chunks": [
+        179
+      ],
+      "name": ""
+    },
+    "*": {
+      "id": 950,
+      "chunks": [
+        179
+      ],
+      "name": "*"
+    },
+    "__esModule": {
+      "id": 950,
+      "chunks": [
+        179
+      ],
+      "name": "__esModule"
+    },
+    "useRefresh": {
+      "id": 950,
+      "chunks": [
+        179
+      ],
+      "name": "useRefresh"
+    },
+    "useServerResponse": {
+      "id": 950,
+      "chunks": [
+        179
+      ],
+      "name": "useServerResponse"
+    }
+  },
+  "file:///home/runner/work/rsc-edge-mfe/rsc-edge-mfe/apps/mfe/src/Cache.client.js": {
+    "": {
+      "id": 209,
+      "chunks": [
+        891
+      ],
+      "name": ""
+    },
+    "*": {
+      "id": 209,
+      "chunks": [
+        891
+      ],
+      "name": "*"
+    },
+    "useRefresh": {
+      "id": 209,
+      "chunks": [
+        891
+      ],
+      "name": "useRefresh"
+    },
+    "useServerResponse": {
+      "id": 209,
+      "chunks": [
+        891
+      ],
+      "name": "useServerResponse"
+    }
+  },
+  "file:///home/runner/work/rsc-edge-mfe/rsc-edge-mfe/apps/mfe/src/Root.client.js": {
+    "": {
+      "id": 260,
+      "chunks": [
+        891
+      ],
+      "name": ""
+    },
+    "*": {
+      "id": 260,
+      "chunks": [
+        891
+      ],
+      "name": "*"
+    },
+    "LocationContext": {
+      "id": 260,
+      "chunks": [
+        891
+      ],
+      "name": "LocationContext"
+    },
+    "default": {
+      "id": 260,
+      "chunks": [
+        891
+      ],
+      "name": "default"
+    },
+    "useLocation": {
+      "id": 260,
+      "chunks": [
+        891
+      ],
+      "name": "useLocation"
+    }
+  },
+  "file:///home/runner/work/rsc-edge-mfe/rsc-edge-mfe/apps/mfe/src/index.client.js": {
+    "": {
+      "id": 474,
+      "chunks": [
+        891
+      ],
+      "name": ""
+    },
+    "*": {
+      "id": 474,
+      "chunks": [
+        891
+      ],
+      "name": "*"
+    }
+  }
+}
